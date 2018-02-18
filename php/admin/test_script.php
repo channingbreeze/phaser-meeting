@@ -1,12 +1,3 @@
-<?php 
-
-session_start();
-if(!isset($_SESSION['username'])) {
-  header("Location: ../login.php");
-}
-
-?>
-
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8" />
@@ -14,6 +5,5 @@ if(!isset($_SESSION['username'])) {
   <script type="text/javascript" src="http://phasermeeting.webxinxin.com/download/phasermeeting.js"></script>
 </head>
 <body>
-  测试脚本
-  <div></div>
+  <div>测试脚本</div>
 </body>
