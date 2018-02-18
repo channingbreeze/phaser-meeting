@@ -5,7 +5,7 @@ if(!isset($_SESSION['username'])) {
   header("Location: ../login.php");
 }
 
-require_once dirname ( __FILE__ ) . '/../services/GameService.class.php';
+require_once dirname ( __FILE__ ) . '/../../services/GameService.class.php';
 
 $gameService = new GameService();
 
