@@ -44,7 +44,7 @@ class GameService {
 	public function updateGameById($id, $gameName, $author, $gameUrl, $scoreFull, $scoreTitle, $scoreAudience) {
 
 		$sqlHelper = new SQLHelper();
-		$sql = "update game set gmt_modify=now(), game_name='" . $gameName . "', author='" . $author . "', game_url='" . $gameUrl . "', score_full=" . $scoreFull . ", score_title=" . $scoreTitle . ", score_audience=" . $scoreAudience . " where is_deleted=0";
+		$sql = "update game set gmt_modify=now(), game_name='" . $gameName . "', author='" . $author . "', game_url='" . $gameUrl . "', score_full=" . $scoreFull . ", score_title=" . $scoreTitle . ", score_audience=" . $scoreAudience . " where id=" . $id . " and is_deleted=0";
 		$res = $sqlHelper->execute_dqm($sql);
 		return $res;
 
